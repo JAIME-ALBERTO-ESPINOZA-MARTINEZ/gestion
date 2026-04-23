@@ -1,18 +1,12 @@
-def main():
-    print("Hello from gestion!")
-
-
-if __name__ == "__main__":
-    main()
 import flet as ft
 from controllers.UserControllers import AuthController
-from controllers.TareasControllers import TareaController
-from view.loginView import LoginView
-from view.dashboard import DashboardView
+from controllers.TareasControllers import TareaControllers
+from views.loginView import LoginView
+from views.dashboard import DashboardView
 
-def main(page: ft.Page):
+def start(page: ft.Page):
     auth_ctrl = AuthController()
-    tarea_ctrl = TareaController() 
+    tarea_ctrl = TareaControllers() 
     
     def route_change(route):
         page.views.clear()
